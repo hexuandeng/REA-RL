@@ -1,0 +1,6 @@
+model_dir: ""
+temperature: 0
+max_tokens: 16384
+max_model_len: 16384
+llm_gpu_memory_utilization: 0.95
+seed: 2

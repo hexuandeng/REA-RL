@@ -1,0 +1,34 @@
+{
+    "bf16": {
+        "enabled": "auto"
+    },
+    "gradient_accumulation_steps": "auto",
+    "gradient_clipping": "auto",
+    "optimizer": {
+        "params": {
+            "betas": "auto",
+            "eps": "auto",
+            "lr": "auto",
+            "weight_decay": "auto"
+        },
+        "type": "AdamW"
+    },
+    "steps_per_print": 4000,
+    "train_batch_size": "auto",
+    "train_micro_batch_size_per_gpu": "auto",
+    "wall_clock_breakdown": false,
+    "zero_optimization": {
+        "allgather_bucket_size": 200000000.0,
+        "allgather_partitions": true,
+        "contiguous_gradients": true,
+        "offload_optimizer": {
+            "device": "cpu",
+            "pin_memory": true
+        },
+        "overlap_comm": true,
+        "reduce_bucket_size": 200000000.0,
+        "reduce_scatter": true,
+        "round_robin_gradients": true,
+        "stage": 2
+    }
+}
