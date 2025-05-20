@@ -38,13 +38,7 @@ def processor(data, model_dir, max_length=16384):
             "lengths": len(tokenized),
             "think_lengths": len(tokenized_think)
         })
-        # try:
-        #     correct = math_equiv(gold, predict)
-        #     asw.append((predict, correct))
-        # except Exception as e:
-        #     asw.append((predict, False))
-        #     print(f"Error during math_equiv for gold='{gold}', predict='{predict}': {e}")
-            
+
     return results
 
 def math_judge(data):

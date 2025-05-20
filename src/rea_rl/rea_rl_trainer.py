@@ -17,7 +17,7 @@ from accelerate.utils import broadcast_object_list, gather, gather_object, is_pe
 
 from trl import GRPOTrainer
 from trl.trainer.utils import pad
-from trl.trainer.rea_rl_trainer import RepeatRandomSampler
+from trl.trainer.grpo_trainer import RepeatRandomSampler
 from trl.data_utils import apply_chat_template, is_conversational, maybe_apply_chat_template
 from trl.extras.profiling import profiling_context, profiling_decorator
 from generation.utils import prompt_labeling

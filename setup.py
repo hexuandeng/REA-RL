@@ -70,6 +70,7 @@ _deps = [
     "antlr4-python3-runtime==4.11.1",
     "pyparsing==3.2.1",
     "word2number==1.1",
+    "math-verify==0.5.2",  # Used for math verification in grpo
 ]
 
 # this is a lookup table with items like:
@@ -90,7 +91,7 @@ extras["tests"] = deps_list("pytest", "parameterized")
 extras["torch"] = deps_list("torch")
 extras["quality"] = deps_list("ruff", "isort", "flake8")
 extras["code"] = deps_list("e2b-code-interpreter", "python-dotenv")
-extras["eval"] = deps_list("antlr4-python3-runtime", "pyparsing", "word2number")
+extras["eval"] = deps_list("antlr4-python3-runtime", "pyparsing", "word2number", "math-verify")
 extras["dev"] = extras["quality"] + extras["tests"] + extras["eval"]
 
 # core dependencies shared across the whole project - keep this to a bare minimum :)
@@ -102,7 +103,6 @@ install_requires = [
     deps["deepspeed"],
     deps["hf_transfer"],
     deps["huggingface-hub"],
-    deps["langdetect"],
     deps["latex2sympy2_extended"],
     deps["liger_kernel"],
     deps["packaging"],  # utilities from PyPA to e.g., compare versions

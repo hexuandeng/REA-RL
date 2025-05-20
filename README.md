@@ -74,8 +74,8 @@ This repository builds upon the foundation of [OPEN-R1 repository](https://githu
       * `sft.py`: Script for Supervised Fine-Tuning, employed for training the reflection model and the SFT baseline.
       * `dpo.py`: Script for Direct Preference Optimization, used for training the RPO baseline.
       * `vllm_server.py`: Adapted from `trl` version 0.16.0. A utility for setting up a VLLM server, potentially used for efficient online RL generation.
-  * **`recipes/`**: This directory contains YAML configuration files for all experiments, covering various model setups (e.g., `DeepSeek-R1-Distill-Qwen-7B`), Reinforcement Learning (RL) methods (`config_ReflectRL.yaml`), and Accelerate configurations.
-  * **`scripts/`**: Shell scripts for launching training, evaluation, and data processing tasks (e.g., `reflect_rl.sh`, `math_eval.sh`, `overthinking_detection.sh`).
+  * **`recipes/`**: This directory contains YAML configuration files for all experiments, covering various model setups (e.g., `DeepSeek-R1-Distill-Qwen-7B`), Reinforcement Learning (RL) methods (`config_REARL.yaml`), and Accelerate configurations.
+  * **`scripts/`**: Shell scripts for launching training, evaluation, and data processing tasks (e.g., `rea_rl.sh`, `math_eval.sh`, `overthinking_detection.sh`).
   * **`dataset/`**: This directory is intended for storing datasets. We provide `DeepScaleR/DeepScaleR_clean.json`, which is a filtered dataset where the models failed to answer correctly across all four reasoning paths.
 
 
@@ -105,15 +105,15 @@ Once a base LRM and an optional (but highly recommended) trained Reflection Mode
 Our primary training script is configured to use three GPUs: two for training and one for VLLM-based data generation. To run our proposed approach, simply execute:
 
 ```shell
-bash reflect_rl.sh
+bash rea_rl.sh
 ```
 
 For alternative configurations, you can run other provided scripts or modify the respective configuration files located in the `recipes/` directory.
 
 Ablation studies can be performed using the following scripts:
 
-  * `scripts/reflect_rl_no_reflection_model.sh`
-  * `scripts/reflect_rl_no_reflection_reward.sh`
+  * `scripts/rea_rl_no_reflection_model.sh`
+  * `scripts/rea_rl_no_reflection_reward.sh`
   * `scripts/grpo_len.sh` (for GRPO with only length reward)
   * `scripts/grpo.sh` (for GRPO with only accuracy reward)
 
