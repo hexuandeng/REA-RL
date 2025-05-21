@@ -51,7 +51,6 @@ _deps = [
     "hf_transfer>=0.1.4",
     "huggingface-hub[cli]>=0.19.2,<1.0",
     "isort>=5.12.0",
-    "latex2sympy2_extended>=1.0.6",
     "liger_kernel==0.5.3",
     "packaging>=23.0",
     "parameterized>=0.9.0",
@@ -67,7 +66,7 @@ _deps = [
     "vllm==0.7.2",
     "wandb>=0.19.1",
     "pebble==5.1.1",
-    "antlr4-python3-runtime==4.11.1",
+    "ijson>=3.4.0",
     "pyparsing==3.2.1",
     "word2number==1.1",
     "math-verify==0.5.2",  # Used for math verification in grpo
@@ -91,7 +90,7 @@ extras["tests"] = deps_list("pytest", "parameterized")
 extras["torch"] = deps_list("torch")
 extras["quality"] = deps_list("ruff", "isort", "flake8")
 extras["code"] = deps_list("e2b-code-interpreter", "python-dotenv")
-extras["eval"] = deps_list("antlr4-python3-runtime", "pyparsing", "word2number", "math-verify")
+extras["eval"] = deps_list("pyparsing", "word2number", "math-verify")
 extras["dev"] = extras["quality"] + extras["tests"] + extras["eval"]
 
 # core dependencies shared across the whole project - keep this to a bare minimum :)
@@ -103,7 +102,6 @@ install_requires = [
     deps["deepspeed"],
     deps["hf_transfer"],
     deps["huggingface-hub"],
-    deps["latex2sympy2_extended"],
     deps["liger_kernel"],
     deps["packaging"],  # utilities from PyPA to e.g., compare versions
     deps["safetensors"],
@@ -112,6 +110,9 @@ install_requires = [
     deps["trl"],
     deps["wandb"],
     deps["pebble"],
+    deps["peft"],
+    deps["vllm"],
+    deps["ijson"],
 ]
 
 setup(

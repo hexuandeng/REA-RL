@@ -38,12 +38,7 @@ pip install --upgrade pip
 Next, install the project and its core dependencies:
 
 ```shell
-# Clone the repository (if you haven't already)
-# git clone [URL_OF_YOUR_REPO]
-# cd REA-RL
-pip install vllm==0.7.2
-pip install setuptools
-pip install -e .
+pip install -e ".[dev]"
 pip install flash-attn==2.7.4.post1 --no-build-isolation
 ```
 
