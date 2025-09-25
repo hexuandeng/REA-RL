@@ -22,7 +22,7 @@ This repository hosts the code for **"REA-RL: Reflection-Aware Online Reinforcem
 4.  **Combined Efficiency and Performance:** The goal is to significantly reduce inference tokens (cost) while maintaining or even improving task accuracy, especially on complex reasoning tasks.
 
 <p align="center">
-  <img src="main.png" width="800" alt="REA-RL Overview" />
+  <img src="main.png" width="900" alt="REA-RL Overview" />
 </p>
 
 ## Installation
