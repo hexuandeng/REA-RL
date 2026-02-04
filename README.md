@@ -1,6 +1,6 @@
 # REA-RL: Reflection-Aware Online RL for Efficient LRMs
 
-*Official PyTorch implementation for the REA-RL paper. This repository provides the code to reproduce our findings and build upon our work in making Large Reasoning Models more efficient.*
+*Official PyTorch implementation for the REA-RL paper, accepted to **ICLR 2026**. This repository provides the code to reproduce our findings and build upon our work in making Large Reasoning Models more efficient.*
 
 **Table of Contents**
 1.  [Overview](#overview)
@@ -10,6 +10,7 @@
     * [Supervised Fine-Tuning (SFT) for Reflection Model](#supervised-fine-tuning-sft-for-reflection-model)
     * [Reflection-Aware Reinforcement Learning (REA-RL)](#reflection-aware-reinforcement-learning-rea-rl)
 5.  [Evaluating Models](#evaluating-models)
+6.  [Citation](#citation)
 
 
 ## Overview
@@ -119,4 +120,18 @@ Model evaluation, particularly for math reasoning tasks, is conducted using the 
 ```shell
 # Example: Evaluate a trained model
 bash scripts/math_eval.sh [GPU_ID] [MODEL_NAME] [STEP]
+```
+
+## Citation
+
+If you find this work helpful, please consider citing as follows:
+
+```bibtex
+@inproceedings{ICLR2026_E6keG5QDct,
+ author = {Deng, Hexuan and Jiao, Wenxiang and Liu, Xuebo and Rao, Jun and Zhang, Min},
+ booktitle = {The Fourteenth International Conference on Learning Representations},
+ title = {{REA}-{RL}: Reflection-Aware Online Reinforcement Learning for Efficient Reasoning},
+ url = {https://openreview.net/forum?id=E6keG5QDct},
+ year = {2026}
+}
 ```
